@@ -1,6 +1,6 @@
 ﻿namespace Tutorial3.Entities;
 
-public class Equipment
+public abstract class Equipment
 {
     public Guid Id { get; init; }
     public string Name { get; set; }
