@@ -1,4 +1,4 @@
-namespace Tutorial.Entities;
+namespace Tutorial3.Entities;
 
 public abstract class User {
     public Guid Id { get; init; }
