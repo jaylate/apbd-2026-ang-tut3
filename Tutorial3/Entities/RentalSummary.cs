@@ -1,3 +1,5 @@
+namespace Tutorial3.Entities;
+
 public class RentalSummary
 {
     public int TotalEquipment { get; init; }

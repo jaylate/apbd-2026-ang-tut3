@@ -1,3 +1,7 @@
+namespace Tutorial3.Services;
+
+using Tutorial3.Entities;
+
 public class ReportService {
     private readonly IRentalService _rentalService;
 
@@ -6,7 +10,7 @@ public class ReportService {
 	_rentalService = rentalService;
     }
 
-    public RentalSummary GenerateSummary(IRentalService)
+    public RentalSummary GenerateSummary()
     {
 	var equipment = _rentalService.GetAllEquipment();
         var users = _rentalService.GetAllUsers();

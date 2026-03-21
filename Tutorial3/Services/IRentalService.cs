@@ -2,7 +2,7 @@ namespace Tutorial3.Services;
 
 using Tutorial3.Entities;
 
-interface IRentalService {
+public interface IRentalService {
     public void AddUser(User user);
     public void AddEquipment(Equipment e);
     public void MarkEquipmentUnavailable(Equipment e);
