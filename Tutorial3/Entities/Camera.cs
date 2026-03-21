@@ -7,7 +7,7 @@ public class Camera : Equipment
 
     public Camera(string name, bool isAvailable, string resolution, bool hasflash) : base(name, isAvailable)
     {
-	Resolution = resolution;
-	HasFlash = hasflash;
+        Resolution = resolution;
+        HasFlash = hasflash;
     }
 }

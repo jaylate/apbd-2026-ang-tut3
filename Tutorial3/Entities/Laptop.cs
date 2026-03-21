@@ -7,7 +7,7 @@ public class Laptop : Equipment
 
     public Laptop(string name, bool isAvailable, float storage, float ram) : base(name, isAvailable)
     {
-	Storage = storage;
-	RAM = ram;
+        Storage = storage;
+        RAM = ram;
     }
 }

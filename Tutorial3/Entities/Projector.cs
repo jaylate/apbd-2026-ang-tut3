@@ -7,7 +7,7 @@ public class Projector : Equipment
 
     public Projector(string name, bool isAvailable, int lumens, string resolution) : base(name, isAvailable)
     {
-	Lumens = lumens;
-	Resolution = resolution;
+        Lumens = lumens;
+        Resolution = resolution;
     }
 }

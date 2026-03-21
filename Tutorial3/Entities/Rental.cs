@@ -1,6 +1,7 @@
 namespace Tutorial3.Entities;
 
-public class Rental {
+public class Rental
+{
     public Guid Id { get; init; }
     public User Renter { get; set; }
     public Equipment RentedEquipment { get; set; }
@@ -12,11 +13,11 @@ public class Rental {
 
     public Rental(User user, Equipment equipment, DateTime dueDate)
     {
-	Renter = user;
-	RentedEquipment = equipment;
-	RentDate = DateTime.Now;
-	DueDate = dueDate;
-	ActualReturnDate = null;
-	Penalty = 0;
+        Renter = user;
+        RentedEquipment = equipment;
+        RentDate = DateTime.Now;
+        DueDate = dueDate;
+        ActualReturnDate = null;
+        Penalty = 0;
     }
 }
