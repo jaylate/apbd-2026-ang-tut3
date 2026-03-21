@@ -74,6 +74,11 @@ public class RentalService : IRentalService {
         return users;
    }
 
+   public List<Rental> GetAllRentals()
+   {
+	return rentals;
+   }
+
    public List<Rental> GetRentalsForUser(User user)
    {
 	return rentals.Where(r => r.Renter.Id == user.Id).ToList();
@@ -87,9 +92,5 @@ public class RentalService : IRentalService {
    public List<Equipment> GetAvailableEquipment()
    {
 	return equipment.Where(e => e.IsAvailable).ToList();
-   }
-
-   public void RentalServiceStateSummary() {
-	// TODO
    }
 }

@@ -12,8 +12,9 @@ interface IRentalService {
 
     public List<Equipment> GetAllEquipment();
     public List<User> GetAllUsers();
+    public List<Rental> GetAllRentals();
+
     public List<Rental> GetRentalsForUser(User user);
     public List<Rental> GetOverdueRentals();
     public List<Equipment> GetAvailableEquipment();
-    public void RentalServiceStateSummary();
 }
