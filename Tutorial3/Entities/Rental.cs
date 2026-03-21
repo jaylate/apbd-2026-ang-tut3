@@ -16,6 +16,7 @@ public class Rental {
 	RentedEquipment = equipment;
 	RentDate = DateTime.Now;
 	DueDate = dueDate;
+	ActualReturnDate = null;
 	Penalty = 0;
     }
 }

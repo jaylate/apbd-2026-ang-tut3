@@ -22,7 +22,7 @@ public class RentalService : IRentalService {
    {
 	var eq = equipment.FirstOrDefault(x => x.Id == e.Id);
 	if (eq != null)
-	    eq.IsAvailable = false;
+	    eq.IsAvailable = !eq.IsAvailable;
    }
 
    public Rental Rent(User user, Equipment e, DateTime dueDate) {
@@ -50,7 +50,7 @@ public class RentalService : IRentalService {
     }
 
    public void Return(Equipment e) {
-	var r = rentals.FirstOrDefault(x => x.RentedEquipment.Id == e.Id);
+	var r = rentals.FirstOrDefault(x => x.RentedEquipment.Id == e.Id && x.ActualReturnDate == null);
 	if (r == null)
 	    throw new EquipmentNotRentedException(e.Id);
 	if (r.ActualReturnDate != null)

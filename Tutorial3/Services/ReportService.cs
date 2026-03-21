@@ -2,7 +2,7 @@ namespace Tutorial3.Services;
 
 using Tutorial3.Entities;
 
-public class ReportService {
+public class ReportService : IReportService {
     private readonly IRentalService _rentalService;
 
     public ReportService(IRentalService rentalService)

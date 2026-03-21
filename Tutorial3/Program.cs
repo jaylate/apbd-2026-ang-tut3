@@ -1,4 +1,8 @@
-﻿using Tutorial3.Entities;
+﻿using Tutorial3.Services;
+using Tutorial3.Entities;
+using Tutorial3.ui;
 
-var test = new Laptop("Acer", true, 512, 16);
-Console.WriteLine("Hello, World!");
+RentalService rentalService = new RentalService();
+ReportService reportService = new ReportService(rentalService);
+Menu menu = new Menu(rentalService, reportService);
+menu.Start();
