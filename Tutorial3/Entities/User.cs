@@ -6,6 +6,8 @@ public abstract class User
     public string FirstName { get; set; }
     public string LastName { get; set; }
 
+    public abstract int MaxRentals { get; }
+
     public User(string firstName, string lastName)
     {
         FirstName = firstName;

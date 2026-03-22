@@ -34,10 +34,8 @@ public class RentalService : IRentalService
 
         var userRentQuantity = rentals.Count(r => r.Renter.Id == user.Id && r.ActualReturnDate == null);
 
-        if (user is Student && userRentQuantity >= RentalPolicy.MAX_RENTAL_FOR_STUDENT)
-            throw new RentalLimitExceededException(user.Id, RentalPolicy.MAX_RENTAL_FOR_STUDENT);
-        if (user is Employee && userRentQuantity >= RentalPolicy.MAX_RENTAL_FOR_EMPLOYEE)
-            throw new RentalLimitExceededException(user.Id, RentalPolicy.MAX_RENTAL_FOR_EMPLOYEE);
+        if (userRentQuantity >= user.MaxRentals)
+            throw new RentalLimitExceededException(user.Id, user.MaxRentals);
 
         var eq = equipment.FirstOrDefault(x => x.Id == e.Id);
         if (eq == null)
